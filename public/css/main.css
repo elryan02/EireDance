@@ -1,0 +1,35 @@
+body {
+  margin: 3% 28%;
+  background-color: #456789;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+}
+
+img {
+  height: 60%;
+  width: auto;
+}
+
+.child {
+  flex: 1 0 35%;
+  margin: 5px;
+  height: 20vw;
+  background-color: #012345;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #456789;
+  font-size: 2em
+}
+
+.child:hover {
+  background-color: #456789;
+  color: #012345
+}
