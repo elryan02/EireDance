@@ -15,5 +15,13 @@ html(lang="en")
       else
         p Incomplete
 
-      a(href="create")
       button(type="button") Next
+
+      h2 Create
+
+      form(action='/turnout', method="post")
+        label Exercise Name
+          input(type='text', name='name')
+        label Duration (in seconds)
+            input(type='number', name='name')
+        button(type='submit') Submit

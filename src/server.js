@@ -12,6 +12,10 @@ app.get('/turnout', function(req, res) {
   res.render('turnout', { name: "Wall Splits", duration: "00:01:00", isdone: false });
 });
 
+app.post('/turnout', function(req, res) {
+  res.render('turnout');
+});
+
 app.listen(3030, function() {
   console.log('Server listening on localhost3030')
 });
