@@ -1,4 +1,4 @@
 module.exports = {
-  appName: 'clproject',
+  appName: 'EireDance',
   port: 3030
 }

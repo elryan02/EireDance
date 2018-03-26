@@ -1,22 +1,17 @@
 //path requires the path module which allows you to parse files
-const path = require('path');
-
-const express = require('express');
-const config = require('./config');
-
+var express = require('express');
 const app = express();
 
-const publicPath = path.resolve(__dirname, '../public');
-app.use(express.static(publicPath));
+app.set('view engine', 'pug');
 
-app.use('/doc', function(req, res, next) {
-  res.end(`Documentation http://expressjs.com/`);
+app.get('/', function(req, res) {
+  res.render('index');
 });
 
-app.use(function(req, res, next) {
-  res.end("Hello World!");
+app.get('/hello', function(req, res) {
+  res.send('<h1>whaaat</h1>')
 });
 
-app.listen(config.port, function() {
-  console.log(`${config.appName} is listening on port ${config.port}`);
+app.listen(3030, function() {
+  console.log('Server listening on localhost3030')
 });
