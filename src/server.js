@@ -8,8 +8,8 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
-app.get('/hello', function(req, res) {
-  res.send('<h1>whaaat</h1>')
+app.get('/turnout', function(req, res) {
+  res.render('turnout', { name: "Wall Splits", duration: "00:01:00", isdone: false });
 });
 
 app.listen(3030, function() {
