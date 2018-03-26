@@ -1,0 +1,19 @@
+
+doctype html
+html(lang="en")
+  head
+
+    title EireDance
+  body
+    header
+      h2 #{name}
+    section#content
+      h3 Duration of #{duration}
+
+      if isdone
+        p Complete
+      else
+        p Incomplete
+
+      a(href="create")
+      button(type="button") Next
