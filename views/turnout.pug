@@ -2,26 +2,32 @@
 doctype html
 html(lang="en")
   head
-
     title EireDance
   body
+
     header
-      h2 #{name}
+      h2 hi
+
     section#content
-      h3 Duration of #{duration}
-
-      if isdone
-        p Complete
-      else
-        p Incomplete
-
-      button(type="button") Next
 
       h2 Create
-
       form(action='/turnout', method="post")
         label Exercise Name
           input(type='text', name='name')
         label Duration (in seconds)
-            input(type='number', name='name')
+          input(type='number', name='time')
         button(type='submit') Submit
+
+      if name
+        table
+          tr
+            th Name
+            th Duration
+            th Complete
+          tr
+              td #{name}
+              td #{time} seconds
+              if isdone
+                td complete
+              else
+                td incomplete

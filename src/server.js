@@ -1,6 +1,9 @@
 //path requires the path module which allows you to parse files
-var express = require('express');
+const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+
+app.use(bodyParser.urlencoded({ extended: false}));
 
 app.set('view engine', 'pug');
 
@@ -9,11 +12,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/turnout', function(req, res) {
-  res.render('turnout', { name: "Wall Splits", duration: "00:01:00", isdone: false });
+  res.render('turnout');
 });
 
 app.post('/turnout', function(req, res) {
-  res.render('turnout');
+  res.render('turnout', { name: req.body.name, time: req.body.time, isdone: false});
 });
 
 app.listen(3030, function() {
