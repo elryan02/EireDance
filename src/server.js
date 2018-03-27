@@ -7,6 +7,8 @@ app.use(bodyParser.urlencoded({ extended: false}));
 
 app.set('view engine', 'pug');
 
+app.use('/static', express.static('public')); /* This links pug to css */
+
 const mainRoutes = require('./routes')
 const turnoutRoutes = require('./routes/turnout')
 

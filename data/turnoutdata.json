@@ -1,28 +1,32 @@
 {
     "data": {
-        "title": "Turnout Exercises",
-        "Exercises": [
+        "title": "JavaScript Flashcards",
+        "cards": [
             {
-                "Name": "Wall Splits",
-                "Duration": "60",
-                "isdone": "false"
+                "question": "What language are Express apps written in?",
+                "hint": "It starts with a \"J\"",
+                "answer": "JavaScript"
             },
             {
-                "Name": "Double Seated Leg Rotation",
-                "Duration": "60",
-                "isdone": "false"
+                "question": "What is one way a website can store data in a user's browser?",
+                "hint": "They are delicious with milk",
+                "answer": "Cookies"
             },
             {
-                "Name": "Single Seated Leg Rotation: Left Foot",
-                "Duration": "30",
-                "isdone": "false"
+                "question": "What is a common way to shorten the response object's name inside middleware?",
+                "hint": "It has the same abbreviation as \"resolution\"",
+                "answer": "res"
             },
             {
-                "Name": "Single Seated Leg Rotation: Right Foot",
-                "Duration": "30",
-                "isdone": "false"
+                "question": "How many different values can booleans have?",
+                "hint": "Think: binary",
+                "answer": "2"
+            },
+            {
+                "question": "Which HTML element can contain JavaScript?",
+                "hint": "It starts with an \"s\"",
+                "answer": "<script>"
             }
-
         ]
     }
 }

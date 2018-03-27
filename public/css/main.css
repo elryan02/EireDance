@@ -8,15 +8,6 @@ body {
   flex-wrap: wrap;
 }
 
-button {
-  border: none;
-}
-
-img {
-  height: 60%;
-  width: auto;
-}
-
 .child {
   flex: 1 0 35%;
   margin: 5px;
@@ -32,4 +23,31 @@ img {
 .child:hover {
   background-color: #456789;
   color: #012345
+}
+
+/* BUTTONS */
+button {
+  border: none;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #012345;
+    border-color: #456789;
+}
+
+/* MISC */
+
+
+.form-control-lg {
+  width: 80%;
+}
+
+label {
+  padding: 10px;
+}
+
+img {
+  height: 60s%;
+  width: auto;
 }
