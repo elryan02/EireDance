@@ -1,0 +1,28 @@
+{
+    "data": {
+        "title": "Turnout Exercises",
+        "Exercises": [
+            {
+                "Name": "Wall Splits",
+                "Duration": "60",
+                "isdone": "false"
+            },
+            {
+                "Name": "Double Seated Leg Rotation",
+                "Duration": "60",
+                "isdone": "false"
+            },
+            {
+                "Name": "Single Seated Leg Rotation: Left Foot",
+                "Duration": "30",
+                "isdone": "false"
+            },
+            {
+                "Name": "Single Seated Leg Rotation: Right Foot",
+                "Duration": "30",
+                "isdone": "false"
+            }
+
+        ]
+    }
+}
