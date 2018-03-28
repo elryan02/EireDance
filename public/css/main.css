@@ -3,6 +3,12 @@ body {
   background-color: #456789;
 }
 
+body, .turnout {
+  margin: 3% 10%;
+  background-color: #456789;
+  text-align: center;
+}
+
 .parent {
   display: flex;
   flex-wrap: wrap;
@@ -45,9 +51,18 @@ button {
 
 label {
   padding: 10px;
+  text-align: left;
 }
 
 img {
   height: 60s%;
   width: auto;
+}
+
+td, th {
+    padding: 0 100px;
+    align: center;
+}
+table {
+  margin: 0 auto;
 }
