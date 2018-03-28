@@ -1,0 +1,32 @@
+{
+    "data": {
+        "title": "Turnout Exercises",
+        "tExercises": [
+            {
+                "name": "Wall Splits",
+                "duration": "60",
+                "isDone": "false"
+            },
+            {
+                "name": "Single Leg Rotation (R)",
+                "duration": "30",
+                "isDone": "false"
+            },
+            {
+                "name": "Single Leg Roatation (L)",
+                "duration": "30",
+                "isDone": "false"
+            },
+            {
+                "name": "Double Leg Rotation",
+                "duration": "60",
+                "isDone": "false"
+            },
+            {
+                "name": "Jump Squats",
+                "duration": "60",
+                "isDone": "false"
+            }
+        ]
+    }
+}
