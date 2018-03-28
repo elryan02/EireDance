@@ -10,11 +10,11 @@ app.set('view engine', 'pug');
 app.use('/static', express.static('public')); /* This links pug to css */
 
 const mainRoutes = require('./routes')
-const turnoutRoutes = require('./routes/turnout')
+const tExerciseRoutes = require('./routes/tExercises')
 
 app.use(mainRoutes);
 
-app.use('/turnout', turnoutRoutes);
+app.use('/tExercises', tExerciseRoutes);
 
 app.listen(3030, function() {
   console.log('Server listening on localhost3030')
