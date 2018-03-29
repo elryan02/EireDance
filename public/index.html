@@ -8,37 +8,38 @@
     <title>EireDance</title>
   </head>
   <body>
-      <div class="parent">
-        <a href="" class="child img" id="turnoutBtn"><img src="https://i.imgur.com/1AVjxmk.png" title="Turnout Icon" /></a>
-        <!-- <button class="child">turnout</button> -->
-        <a href="" class="child img" id="mobilityBtn"><img src="https://i.imgur.com/43P4DjX.png" title="Mobiltiy Icon" /></a>
-        <a href="" class="child img" id="postureBtn"><img src="https://i.imgur.com/IxJicju.png" title="Posture Icon" /></a>
-        <a href="" class="child img" id="createBtn"><img src="https://i.imgur.com/JWxCf6M.png" title="Create" /></a>
+
+    <div id="list-container"></div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        const data = {
+          list: [
+            {name: 'Wall Splits', duration: '60', isDone: 'false'},
+            {name: 'Double Leg Rotation', duration: '60', isDone: 'false'},
+            {name: 'Single Leg Rotation (R)', duration: '30', isDone: 'false'},
+            {name: 'Single Leg Rotation (L)', duration: '30', isDone: 'false'}
+          ],
+        };
+
+        const template = $('#list-template').html();
+        const compiled = Handlebars.compile(template);
+        $('#list-container').html(compiled(data));
+      });
+    </script>
+
+    <script id="list-template" type="text/x-handlebars-template">
+      {{#each list}}
+      <div class="row">
+        <div class="col-xs-4"><strong>{{name}}</strong></div>
+        <div class="col-xs-4">{{duration}}</div>
+        <div class="col-xs-4">{{isDone}}</div>
       </div>
-
-
-
-      <script
-      src="https://code.jquery.com/jquery-3.3.1.js"
-      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-      crossorigin="anonymous"></script>
-
-      <script>
-      $('#turnoutBtn').click(function(){
-        alert("This feature is not yet functional.")
-      });
-
-      $('#mobilityBtn').click(function(){
-        alert("This feature is not yet functional.")
-      });
-
-      $('#postureBtn').click(function(){
-        alert("This feature is not yet functional.")
-      });
-
-      $('#createBtn').click(function(){
-        alert("This feature is not yet functional.")
-      });
-      </script>
+      {{/each}}
+    </script>
   </body>
 </html>

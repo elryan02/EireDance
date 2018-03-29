@@ -1,21 +1,22 @@
 //path requires the path module which allows you to parse files
+const path = require('path');
+
 const express = require('express');
+const config = require('./config');
 const bodyParser = require('body-parser');
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false}));
+const publicPath = path.resolve(__dirname, '../public');
+app.use(express.static(publicPath));
 
-app.set('view engine', 'pug');
+app.use('/turnout', function(req, res, next) {
+  res.end(`Stuff`);
+});
 
-app.use('/static', express.static('public')); /* This links pug to css */
+app.use(function(req, res, next) {
+  res.end("Hello World!");
+});
 
-const mainRoutes = require('./routes')
-const tExerciseRoutes = require('./routes/tExercises')
-
-app.use(mainRoutes);
-
-app.use('/tExercises', tExerciseRoutes);
-
-app.listen(3030, function() {
-  console.log('Server listening on localhost3030')
+app.listen(config.port, function() {
+  console.log(`${config.appName} is listening on port ${config.port}`);
 });
