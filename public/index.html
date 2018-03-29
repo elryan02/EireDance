@@ -15,22 +15,23 @@
     <button id="add-file-button" class="btn btn-primary" onclick="handleAddFileClick()">Add File</button>
         <div id="form-container" class="panel hidden">
           <form id="add-file-form">
-          <div class="form-group">
-          <label for="file-name">Exercise</label>
-          <input type="text" class="form-control" id="file-name" placeholder="(name)">
-        </div>
-        <div class="form-group">
-          <label for="file-duration">Duration</label>
-          <input type="text" class="form-control" id="file-duration" placeholder="(seconds)">
-        </div>
-      <button type="button" onclick="submitFileForm()" class="btn btn-success">Submit</button>
-      <button type="button" onclick="cancelFileForm()" class="btn btn-link">cancel</button>
+  <div class="form-group">
+      <label for="file-name">Name</label>
+      <input type="text" class="form-control" id="file-name" placeholder="">
+  </div>
+  <div class="form-group">
+      <label for="file-duration">Duration</label>
+      <input type="text" class="form-control" id="file-duration" placeholder="">
+  </div>
+    <button type="button" onclick="submitFileForm()" class="btn btn-success">Submit</button>
+    <button type="button" onclick="cancelFileForm()" class="btn btn-link">cancel</button>
+  </form>
     </form>
     </div>
 
 
     <script id="list-template" type="text/x-handlebars-template">
-      {{#each list}}
+      {{#each files}}
       <div class="row">
         <div class="col-xs-4"><strong>{{name}}</strong></div>
         <div class="col-xs-4">{{duration}}</div>
