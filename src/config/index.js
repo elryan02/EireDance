@@ -4,7 +4,7 @@ module.exports = {
   db: {
   username: "emma",
   password: "emma",
-  host: 'ds159507.mlab.com:59507',
-  dbName: 'fsjs-class-project',
+  host: 'ds115569.mlab.com:15569',
+  dbName: 'elrworkoutapp',
 }
-};
+}

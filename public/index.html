@@ -9,6 +9,9 @@
   </head>
   <body>
     <h1>Turnout Conditioning Workout</h1>
+
+    <div id="list-container"></div>
+
     <button id="add-file-button" class="btn btn-primary" onclick="handleAddFileClick()">Add File</button>
         <div id="form-container" class="panel hidden">
           <form id="add-file-form">
@@ -25,8 +28,6 @@
     </form>
     </div>
 
-
-    <div id="list-container"></div>
 
     <script id="list-template" type="text/x-handlebars-template">
       {{#each list}}

@@ -34,22 +34,21 @@ const FILES =  [
   });
 
   router.post('/file', function(req, res, next) {
-  const File = mongoose.model('File');
-  const fileData = {
-    name: req.body.name,
-    duration: req.body.duration,
-    isDone: req.body.isDone
-  };
+    const File = mongoose.model('File');
+    const fileData = {
+      name: req.body.name,
+      duration: req.body.duration,
+    };
 
-  File.create(fileData, function(err, newFile) {
-    if (err) {
-      console.log(err);
-      return res.status(500).json(err);
-    }
+    File.create(fileData, function(err, newFile) {
+      if (err) {
+        console.log(err);
+        return res.status(500).json(err);
+      }
 
-    res.json(newFile);
+      res.json(newFile);
+    });
   });
-});
 
 router.put('/file/:fileId', function(req, res, next) {
   res.end(`Updating file '${req.params.fileId}'`);

@@ -4,7 +4,7 @@ const FileSchema = new mongoose.Schema({
   name: String,
   duration: String,
   isDone: Boolean,
-  created_at: { type: Date, default: Date.now },
+  created_at: { type: Date, default: Date.now }
 });
 
 const File = mongoose.model('File', FileSchema);

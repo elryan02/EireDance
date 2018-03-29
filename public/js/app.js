@@ -18,7 +18,6 @@ function refreshFileList() {
     .then(files => {
       const data = {files: files};
       const html = compiledTemplate(data);
-      console.log('our html', html);
       $('#list-container').html(html);
     })
 }
@@ -32,15 +31,14 @@ function toggleAddFileFormVisibility() {
   $('#form-container').toggleClass('hidden');
 }
 
-function submitFileForm() {
-  const fileData = {
-  name: $('#file-name').val(),
-  duration: $('#file-duration').val(),
-};
+  function submitFileForm() {
+    const fileData = {
+    name: $('#file-name').val(),
+    duration: $('#file-duration').val(),
+    isDone: false
+  };
 
-console.log("Your file data", fileData);
-
-$.ajax({
+  $.ajax({
   type: "POST",
   url: '/api/file',
   data: JSON.stringify(fileData),
@@ -55,6 +53,8 @@ $.ajax({
   .fail(function(error) {
     console.log("Failures at posting, we are", error);
   });
+
+  console.log("Your file data", fileData);
 }
 
 function cancelFileForm() {
