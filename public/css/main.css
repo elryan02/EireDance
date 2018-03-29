@@ -3,8 +3,17 @@ body {
   background-color: #456789;
 }
 
+#header {
+  text-align: center;
+}
+
 h1 {
-  color: white;
+  color: #012345;
+  margin-bottom: 5%;
+  font-size: 2.10em;
+  font-weight: bold;
+  letter-spacing: .2em;
+
 }
 
 .parent {
@@ -13,7 +22,7 @@ h1 {
 }
 
 a {
-    color: white;
+    color: #8c979a;
     text-decoration: none;
     font-weight: bold;
 }
@@ -44,11 +53,16 @@ img {
   color: #012345;
 }
 
+
+
 li:nth-child(odd) {
-  background: #012345;
+  background: #234567;
+  color: #C1C7C9;
+
 }
 li:nth-child(even) {
   background: #456789;
+  color: #C1C7C9;
 }
 
 .list-group-item {
@@ -63,11 +77,33 @@ li:nth-child(even) {
     width: 100%;
 }
 
+
+.btn-link {
+  color: #012345;
+  font-weight: bold;
+}
+
+.btn-link:hover {
+  color: #012345;
+  font-weight: bold;
+}
+
 .btn-success {
     color: #fff;
     background-color: #012345;
-
-style {
-    background-color: #012345;
-    border-style: none;
+    border-color: #456789;
 }
+
+.btn-success:hover {
+    color: #fff;
+    border-color: #456789;
+    background-color: #456789;
+}
+
+#form-container {
+    margin-top: 3%;
+    background-color: #456789;
+}
+
+.form-control {
+    background-color: #f2f3f4;

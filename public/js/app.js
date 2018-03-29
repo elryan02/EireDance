@@ -28,6 +28,7 @@ function refreshFileList() {
 function handleAddFileClick() {
   setFormData({});
   toggleAddFileFormVisibility();
+  $('#add-file-button').addClass('hide');
 
 }
 
@@ -68,6 +69,8 @@ function submitFileForm() {
     })
 
   console.log("Your file data", fileData);
+  $('#add-file-button').removeClass('hide');
+
 }
 
 /*  $.ajax({
@@ -92,6 +95,8 @@ function submitFileForm() {
 
 function cancelFileForm() {
   toggleAddFileFormVisibility();
+  $('#add-file-button').removeClass('hide');
+
 }
 
 /** EDIT **/
