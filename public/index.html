@@ -15,6 +15,8 @@
     <button id="add-file-button" class="btn btn-primary" onclick="handleAddFileClick()">Add File</button>
         <div id="form-container" class="panel hidden">
           <form id="add-file-form">
+            <input type="hidden" id="file-id" value="" />
+
   <div class="form-group">
       <label for="file-name">Name</label>
       <input type="text" class="form-control" id="file-name" placeholder="">
@@ -32,11 +34,12 @@
 
     <script id="list-template" type="text/x-handlebars-template">
       {{#each files}}
-      <div class="row">
-        <div class="col-xs-4"><strong>{{name}}</strong></div>
-        <div class="col-xs-4">{{duration}}</div>
-        <div class="col-xs-4">{{isDone}}</div>
-      </div>
+      <li class="list-group-item">
+        <strong>{{name}}</strong> - {{duration}}
+        <span class="pull-right">
+          <button type="button" class="btn btn-xs btn-default" onclick="handleEditFileClick('{{_id}}')">Edit</button>
+        </span>
+      </li>
       {{/each}}
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
