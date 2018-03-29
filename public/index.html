@@ -8,46 +8,35 @@
     <title>EireDance</title>
   </head>
   <body>
-    <h1>Turnout Conditioning Workout</h1>
-
-    <div id="list-container"></div>
-
-    <button id="add-file-button" class="btn btn-primary" onclick="handleAddFileClick()">Add File</button>
-        <div id="form-container" class="panel hidden">
-          <form id="add-file-form">
-            <input type="hidden" id="file-id" value="" />
-
-  <div class="form-group">
-      <label for="file-name">Name</label>
-      <input type="text" class="form-control" id="file-name" placeholder="">
-  </div>
-  <div class="form-group">
-      <label for="file-duration">Duration</label>
-      <input type="text" class="form-control" id="file-duration" placeholder="">
-  </div>
-    <button type="button" onclick="submitFileForm()" class="btn btn-success">Submit</button>
-    <button type="button" onclick="cancelFileForm()" class="btn btn-link">cancel</button>
-  </form>
-    </form>
-    </div>
-
-
-    <script id="list-template" type="text/x-handlebars-template">
-      {{#each files}}
-      <li class="list-group-item">
-        <strong>{{name}}</strong> - {{duration}}
-        <span class="pull-right">
-          <button type="button" class="btn btn-xs btn-default" onclick="handleEditFileClick('{{_id}}')">Edit</button>
-          <button type="button" class="btn btn-xs btn-danger" onclick="deleteFileClick('{{_id}}')">Del</button>
-        </span>
-      </li>
-      {{/each}}
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
-    <script src="/js/app.js"></script>
+      <div class="parent">
+        <a href="/turnout" class="child img" id="turnoutBtn"><img src="https://i.imgur.com/1AVjxmk.png" title="Turnout Icon" /></a>
+        <!-- <button class="child">turnout</button> -->
+        <a href="" class="child img" id="mobilityBtn"><img src="https://i.imgur.com/43P4DjX.png" title="Mobiltiy Icon" /></a>
+        <a href="" class="child img" id="postureBtn"><img src="https://i.imgur.com/IxJicju.png" title="Posture Icon" /></a>
+        <a href="" class="child img" id="createBtn"><img src="https://i.imgur.com/JWxCf6M.png" title="Create" /></a>
+      </div>
 
 
 
+      <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
+
+      <script>
+      /*$('#turnoutBtn').click(function(){
+        alert("This feature is not yet functional.")
+      }); */
+      $('#mobilityBtn').click(function(){
+        alert("This feature is not yet functional.")
+      });
+      $('#postureBtn').click(function(){
+        alert("This feature is not yet functional.")
+      });
+      $('#createBtn').click(function(){
+        alert("This feature is not yet functional.")
+      });
+      </script>
   </body>
 </html>

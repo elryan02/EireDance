@@ -14,9 +14,14 @@ require('./models/file.model.js');
 const app = express();
 const publicPath = path.resolve(__dirname, '../public');
 
+
 app.use(bodyParser.json());
 app.use(express.static(publicPath));
 app.use('/api', router);
+
+app.get('/turnout',function(req,res){
+  res.sendFile(path.join(__dirname+'/Views/turnout.html'));
+});
 
 
 app.listen(config.port, function() {

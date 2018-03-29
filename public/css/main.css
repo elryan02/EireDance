@@ -3,6 +3,10 @@ body {
   background-color: #456789;
 }
 
+h1 {
+  color: white;
+}
+
 .parent {
   display: flex;
   flex-wrap: wrap;
@@ -31,5 +35,17 @@ img {
 
 .child:hover {
   background-color: #456789;
-  color: #012345
+  color: #012345;
+}
+
+li:nth-child(odd) {
+  background: #012345;
+}
+li:nth-child(even) {
+  background: #456789;
+}
+
+.list-group-item {
+    border: none;
+    color: white;
 }
