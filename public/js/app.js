@@ -24,4 +24,42 @@ function refreshFileList() {
 }
 
 
+function handleAddFileClick() {
+  toggleAddFileFormVisibility();
+}
+
+function toggleAddFileFormVisibility() {
+  $('#form-container').toggleClass('hidden');
+}
+
+function submitFileForm() {
+  const fileData = {
+  name: $('#file-name').val(),
+  duration: $('#file-duration').val(),
+};
+
+console.log("Your file data", fileData);
+
+$.ajax({
+  type: "POST",
+  url: '/api/file',
+  data: JSON.stringify(fileData),
+  dataType: 'json',
+  contentType : 'application/json',
+})
+  .done(function(response) {
+    console.log("We have posted the data");
+    refreshFileList();
+    toggleAddFileFormVisibility();
+  })
+  .fail(function(error) {
+    console.log("Failures at posting, we are", error);
+  });
+}
+
+function cancelFileForm() {
+  toggleAddFileFormVisibility();
+}
+
+
 refreshFileList();

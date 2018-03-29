@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const mongoose = require('mongoose');
 
 const FILES =  [
     {name: 'Wall Splits', duration: '60', isDone: 'false'},
@@ -8,8 +9,18 @@ const FILES =  [
   ];
 
   router.get('/file', function(req, res, next) {
-  res.json(FILES);
+    const fileModel = mongoose.model('File');
+
+    fileModel.find({}, function(err, files) {
+      if (err) {
+        console.log(err);
+        return res.status(500).json(err);
+      }
+
+      res.json(files);
+    });
   });
+
 
   router.get('/file/:fileId', function(req, res, next) {
     const {fileId} = req.params;
@@ -23,24 +34,21 @@ const FILES =  [
   });
 
   router.post('/file', function(req, res, next) {
-    const newId = '' + FILES.length;
-    const data = req.body;
-    data.id = newId;
+  const File = mongoose.model('File');
+  const fileData = {
+    name: req.body.name,
+    duration: req.body.duration,
+    isDone: req.body.isDone
+  };
 
-    FILES.push(data);
-    res.status(201).json(data);
+  File.create(fileData, function(err, newFile) {
+    if (err) {
+      console.log(err);
+      return res.status(500).json(err);
+    }
+
+    res.json(newFile);
   });
-
-  router.put('/file/:fileId', function(req, res, next) {
-  const {fileId} = req.params;
-  const file = FILES.find(entry => entry.id === fileId);
-  if (!file) {
-    return res.status(404).end(`Could not find file '${fileId}'`);
-  }
-
-  file.title = req.body.title;
-  file.description = req.body.description;
-  res.json(file);
 });
 
 router.put('/file/:fileId', function(req, res, next) {
