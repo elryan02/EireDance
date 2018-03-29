@@ -6,6 +6,7 @@ const { tExercises } = data;
 
 router.get('/', function(req, res) {
   res.render('tExercise', {
+    tExercises,
     name: tExercises[0].name,
     duration:tExercises[0].duration,
     isDone: tExercises[0].duration

@@ -7,11 +7,15 @@ html(lang="en")
   turnout.body
 
     header
-      h2 Turnout Conditioning Session
+      h2 List of Exercises
 
     div
     section#content
 
+      ul
+        each name in tExercises
+          li= name
+          
       if name
         table
           tr
