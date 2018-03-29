@@ -12,6 +12,12 @@ h1 {
   flex-wrap: wrap;
 }
 
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 button {
   border: none;
 }
@@ -48,4 +54,20 @@ li:nth-child(even) {
 .list-group-item {
     border: none;
     color: white;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #012345;
+    margin: 5% 0;
+    width: 100%;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #012345;
+
+style {
+    background-color: #012345;
+    border-style: none;
 }
