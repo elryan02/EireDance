@@ -120,5 +120,23 @@ function setFormData(data) {
   $('#file-id').val(file._id);
 }
 
+/** DELETE **/
 
+function deleteFileClick(id) {
+  if (confirm("Are you sure?")) {
+    $.ajax({
+      type: 'DELETE',
+      url: '/api/file/' + id,
+      dataType: 'json',
+      contentType : 'application/json',
+    })
+      .done(function(response) {
+        console.log("File", id, "is DOOMED!!!!!!");
+        refreshFileList();
+      })
+      .fail(function(error) {
+        console.log("I'm not dead yet!", error);
+      })
+  }
+}
 refreshFileList();
