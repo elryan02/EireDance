@@ -31,7 +31,6 @@ router.get('/file', function(req, res, next) {
   const fileData = {
     name: req.body.name,
     duration: req.body.duration,
-    isDone: false
   };
 
   File.create(fileData, function(err, newFile) {
