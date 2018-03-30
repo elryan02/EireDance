@@ -101,7 +101,6 @@ function cancelFileForm() {
 /** EDIT **/
 
 
-
 function handleEditFileClick(id) {
   const file = window.fileList.find(file => file._id === id);
   if (file) {
@@ -109,6 +108,8 @@ function handleEditFileClick(id) {
     toggleAddFileFormVisibility();
   }
 }
+
+/** Returns Form Data to Blank **/
 
 function setFormData(data) {
   data = data || {};

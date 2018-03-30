@@ -1,45 +1,13 @@
+/**** ELEMENTS ****/
+
 body {
   margin: 3% 28%;
   background-color: #456789;
 }
 
-.header {
-  text-align: center;
-}
-
-h1 {
-  color: #012345;
-  font-size: 2.10em;
-  font-weight: bold;
-  letter-spacing: .2em;
-}
-
-h2 {
-  color: #012345;
-  margin-bottom: 5%;
-  font-size: 1em;
-  font-weight: bold;
-  letter-spacing: .2em;
-}
-
 .parent {
   display: flex;
   flex-wrap: wrap;
-}
-
-a {
-    color: #8c979a;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-button {
-  border: none;
-}
-
-img {
-  height: 60%;
-  width: auto;
 }
 
 .child {
@@ -51,7 +19,7 @@ img {
   align-items: center;
   justify-content: center;
   color: #456789;
-  font-size: 2em
+  font-size: 2em;
 }
 
 .child:hover {
@@ -75,6 +43,43 @@ li:nth-child(even) {
     border: none;
     color: white;
 }
+
+#form-container {
+    margin-top: 3%;
+    background-color: #456789;
+}
+
+.form-control {
+    background-color: #f2f3f4;
+}
+
+/**** HEADINGS ****/
+
+.header {
+  text-align: center;
+}
+
+h1 {
+  color: #012345;
+  font-size: 2.10em;
+  font-weight: bold;
+  letter-spacing: .2em;
+}
+
+h2 {
+  color: #012345;
+  margin-bottom: 5%;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: .2em;
+}
+
+/**** BUTTONS ****/
+
+button {
+  border: none;
+}
+
 
 .btn-primary {
     color: #fff;
@@ -106,11 +111,30 @@ li:nth-child(even) {
     background-color: #456789;
 }
 
-#form-container {
-    margin-top: 3%;
-    background-color: #456789;
+/** MISC **/
+
+a {
+    color: #8c979a;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.form-control {
-    background-color: #f2f3f4;
+img {
+/*  height: 60%; */
+  height: 200px;
+  width: auto;
 }
+
+@media (max-width: 650px) {
+
+  img {
+        height: 60%;
+        width: auto;
+  }
+
+@media (max-width: 400px) {
+
+    img {
+          height: 50px;
+          width: auto;
+    }
