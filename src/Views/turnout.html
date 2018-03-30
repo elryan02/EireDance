@@ -8,7 +8,7 @@
     <title>EireDance</title>
   </head>
   <body>
-    <div id="header">
+    <div class="header">
     <h1>Turnout Conditioning Workout</h1>
     </div>
     <div id="list-container"></div>
@@ -36,8 +36,7 @@
     <script id="list-template" type="text/x-handlebars-template">
       {{#each files}}
       <li class="list-group-item">
-        <strong>{{name}}</strong> - {{duration}}
-        <span class="pull-right">
+        <strong>{{name}}</strong>  <span class="pull-right">{{duration}} (sec) | {{isDone}}
           <a href"" onclick="handleEditFileClick('{{_id}}')">Edit</a> |
           <a href"" onclick="deleteFileClick('{{_id}}')">Del</a>
         </span>

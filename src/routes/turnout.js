@@ -1,10 +1,8 @@
+/*
 const express = require('express');
 const router = require('express').Router();
 const mongoose = require('mongoose');
 
-router.get('/', function(req, res, next) {
-  res.render('turnout');
-});
 /*
 const FILES =  [
     {name: 'Wall Splits', duration: '60', isDone: 'false'},

@@ -3,17 +3,24 @@ body {
   background-color: #456789;
 }
 
-#header {
+.header {
   text-align: center;
 }
 
 h1 {
   color: #012345;
-  margin-bottom: 5%;
   font-size: 2.10em;
   font-weight: bold;
   letter-spacing: .2em;
+}
 
+h2 {
+  color: #012345;
+  margin-top: -2%;
+  margin-bottom: 5%;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: .2em;
 }
 
 .parent {
@@ -107,3 +114,4 @@ li:nth-child(even) {
 
 .form-control {
     background-color: #f2f3f4;
+}

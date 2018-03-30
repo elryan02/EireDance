@@ -1,14 +1,7 @@
 const router = require('express').Router();
 const mongoose = require('mongoose');
 
-const FILES =  [
-    {name: 'Wall Splits', duration: '60', isDone: 'false'},
-    {name: 'Double Leg Rotation', duration: '60', isDone: 'false'},
-    {name: 'Single Leg Rotation (R)', duration: '30', isDone: 'false'},
-    {name: 'Single Leg Rotation (L)', duration: '30', isDone: 'false'}
-  ];
-
-  router.get('/file', function(req, res, next) {
+router.get('/file', function(req, res, next) {
     const fileModel = mongoose.model('File');
 
       mongoose.model('File').find({deleted: {$ne: true}}, function(err, files) {
@@ -38,6 +31,7 @@ const FILES =  [
   const fileData = {
     name: req.body.name,
     duration: req.body.duration,
+    isDone: false
   };
 
   File.create(fileData, function(err, newFile) {

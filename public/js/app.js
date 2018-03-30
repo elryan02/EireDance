@@ -70,7 +70,6 @@ function submitFileForm() {
 
   console.log("Your file data", fileData);
   $('#add-file-button').removeClass('hide');
-
 }
 
 /*  $.ajax({
@@ -144,4 +143,5 @@ function deleteFileClick(id) {
       })
   }
 }
+
 refreshFileList();
