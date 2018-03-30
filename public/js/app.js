@@ -29,7 +29,6 @@ function handleAddFileClick() {
   setFormData({});
   toggleAddFileFormVisibility();
   $('#add-file-button').addClass('hide');
-
 }
 
 function toggleAddFileFormVisibility() {
@@ -108,7 +107,7 @@ function handleEditFileClick(id) {
     setFormData(file);
     toggleAddFileFormVisibility();
   }
-  $('#add-file-button').addClass('remove');
+  $('#add-file-button').removeClass('hide');
 }
 
 /** Returns Form Data to Blank **/
