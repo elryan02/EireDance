@@ -4,7 +4,7 @@
 3. Npm
 
 ***** INSTRUCTIONS: *****
-1. Go to root directory of "clproject"
+1. Go to root directory of "EireDance"
 2. npm install to install dependencies
 3. node src/server.js OR npm start (nodemon)
 4. Once on index page, click on the top left tile image on the homescreen to navigate to the Footwork conditioning workout. Click "Add" and specify the name and duration of the exercise to create your own. 
